@@ -2,10 +2,19 @@ import UIKit
 
 let levels = 10
 
-let freeLevels = 4
+let freeLevel = 4
 
 let  bonusLevel = 3
 
 for  level in 1...levels {
-    print(level)
+    if level == bonusLevel {
+        print("Skip bonus level \(bonusLevel)")
+        continue
+    }
+    if level == freeLevel {
+        print("Current free level is \(freeLevel)")
+        continue
+    }
+    print("Play level \(level)")
 }
+
